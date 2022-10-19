@@ -19,6 +19,7 @@ const Artists = ({ artists }) => {
   return (
     <div className="my-10 py-10 border-y">
       <div className="flex justify-between">
+        {/* HEADER 1 h2 */}
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
           Artists
         </h1>
@@ -26,17 +27,20 @@ const Artists = ({ artists }) => {
           onClick={() => {
             setFeatured(!featured)
           }}
-          className={`uppercase tracking-[.3em] text-sm ${
-            featured ? `` : `line-through`
-          }`}
         >
-          SHOW FEATURED
+          <h2
+            className={`uppercase tracking-[.3em] text-sm text-black dark:text-gray-200 ${
+              featured ? `` : `line-through`
+            }`}
+          >
+            SHOW FEATURED
+          </h2>
         </button>
       </div>
       <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 pt-10">
         {artists.map((artist) => (
           <div key={artist.node.name}>
-            <Link href={`/artists/${artist.node.slug}`}>
+            <Link href={`/artist/${artist.node.slug}`}>
               <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"

@@ -1,2 +1,5 @@
 export { default as Header } from "./Header"
+export { default as HeaderLink } from "./HeaderLink"
+export { default as Lightbulb } from "./Lightbulb"
+export { default as HomeLink } from "./HomeLink"
 export { default as Layout } from "./Layout"

@@ -3,7 +3,7 @@ import { Header } from "./"
 
 const Layout = ({ children }) => {
   return (
-    <div className="bg-white dark:bg-black transition-all duration-300">
+    <div className="bg-white text-black dark:bg-black dark:text-white transition-all duration-300">
       <Header />
       {children}
     </div>
