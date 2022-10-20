@@ -11,15 +11,7 @@ export default function Home({ artists }) {
       </Head>
       <Features />
       <Artists artists={artists} />
-
       <Features />
-      <div className="grid grid-cols-5">
-        <div className="w-full bg-red"></div>
-        <div className="w-full bg-ora"></div>
-        <div className="w-full bg-yel"></div>
-        <div className="w-full bg-gre"></div>
-        <div className="w-full bg-blu"></div>
-      </div>
     </div>
   )
 }

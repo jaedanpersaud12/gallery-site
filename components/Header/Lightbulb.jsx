@@ -1,5 +1,5 @@
 import React from "react"
-import useDarkMode from "../hooks/UseDarkmode"
+import useDarkMode from "../../hooks/UseDarkmode"
 
 const Lightbulb = () => {
   const [colorTheme, setTheme] = useDarkMode()

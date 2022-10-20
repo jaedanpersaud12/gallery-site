@@ -2,7 +2,6 @@ import Link from "next/link"
 import React from "react"
 
 const HeaderLink = ({ item }) => {
-  console.log(item.color)
   return (
     <div className="hidden md:block">
       <Link key={item.name} href={`/${item.link}`}>
