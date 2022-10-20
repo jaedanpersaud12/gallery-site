@@ -2,17 +2,6 @@ import Link from "next/link"
 import React, { useState } from "react"
 import { getPosts } from "../../services"
 
-// const artists = [
-//   { name: "Fitzroy Hoyte", imageURL: "/fitzroy.png", featured: true },
-//   { name: "Ethan Lalla", imageURL: "/ethan.png" },
-//   { name: "Mumtaz", imageURL: "/mumtaz.png" },
-//   { name: "Fitzroy Hoyte", imageURL: "/fitzroy.png", featured: true },
-//   { name: "Ethan Lalla", imageURL: "/ethan.png" },
-//   { name: "Mumtaz", imageURL: "/mumtaz.png" },
-//   { name: "Fitzroy Hoyte", imageURL: "/fitzroy.png" },
-//   { name: "Ethan Lalla", imageURL: "/ethan.png" },
-// ]
-
 const Artists = ({ artists }) => {
   console.log(artists[0].node)
   const [featured, setFeatured] = useState(true)
@@ -23,6 +12,7 @@ const Artists = ({ artists }) => {
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
           Artists
         </h1>
+        {/* HEADER 1 */}
         <button
           onClick={() => {
             setFeatured(!featured)

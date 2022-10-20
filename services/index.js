@@ -66,3 +66,48 @@ export const getArtistDetails = async (slug) => {
   const result = await request(graphqlAPI, query, { slug })
   return result.artist
 }
+
+export const getArtworks = async () => {
+  const query = gql`
+    query GetArtworks {
+      artworksConnection {
+        edges {
+          node {
+            name
+            slug
+            image {
+              url(
+                transformation: {
+                  image: { resize: { height: 1000, width: 1000 } }
+                }
+              )
+            }
+          }
+        }
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query)
+  return result.artworksConnection.edges
+}
+
+export const getArtworkDetails = async (slug) => {
+  const query = gql`
+    query GetArtwork($slug: String!) {
+      artwork(where: { slug: $slug }) {
+        name
+        medium
+        slug
+        image {
+          url
+        }
+        artist {
+          name
+          slug
+        }
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query, { slug })
+  return result.artwork
+}

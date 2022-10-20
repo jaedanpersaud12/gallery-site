@@ -4,6 +4,7 @@ import { CurrentPage, Overview, Works } from "../../components"
 import data from "../../components/Artist/pages.json"
 
 const ArtistDetails = ({ artist }) => {
+  console.log(artist)
   const [current, setCurrent] = useState("overview")
   const showCurrent = () => {
     switch (current) {

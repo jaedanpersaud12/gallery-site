@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Artists, Features } from "../components/Home"
+import { Artists, Features } from "../components"
 import { getArtists } from "../services"
 
 export default function Home({ artists }) {
