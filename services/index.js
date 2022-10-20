@@ -49,6 +49,15 @@ export const getArtistDetails = async (slug) => {
         slug
         longBio
         shortBio
+        featuredArt {
+          image {
+            url(
+              transformation: {
+                image: { resize: { height: 1000, width: 1000 } }
+              }
+            )
+          }
+        }
       }
     }
   `

@@ -6,7 +6,7 @@ const Features = () => {
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1100"
-      className="bg-slate-300 h-[700px]"
+      className="bg-slate-300 h-[700px] my-10"
     ></div>
   )
 }
