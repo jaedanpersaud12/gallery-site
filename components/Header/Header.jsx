@@ -6,11 +6,36 @@ import Lightbulb from "./Lightbulb"
 import HomeLink from "./HomeLink"
 
 const navItems = [
-  { name: "Artists", link: "artists", color: "text-red" },
-  { name: "Artwork", link: "artwork", color: "text-ora" },
-  { name: "Exhibitions", link: "exhibitions", color: "text-yel" },
-  { name: "About Us", link: "aboutus", color: "text-gre" },
-  { name: "Contact", link: "contact", color: "text-blu" },
+  {
+    name: "Artists",
+    link: "artists",
+    color: "text-red",
+    hoverColor: "hover:text-red",
+  },
+  {
+    name: "Artwork",
+    link: "artwork",
+    color: "text-ora",
+    hoverColor: "hover:text-ora",
+  },
+  {
+    name: "Exhibitions",
+    link: "exhibitions",
+    color: "text-yel",
+    hoverColor: "hover:text-yel",
+  },
+  {
+    name: "About Us",
+    link: "aboutus",
+    color: "text-gre",
+    hoverColor: "hover:text-gre",
+  },
+  {
+    name: "Contact",
+    link: "contact",
+    color: "text-blu",
+    hoverColor: "hover:text-blu",
+  },
 ]
 
 const Header = () => {

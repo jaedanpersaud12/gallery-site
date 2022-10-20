@@ -1,8 +1,7 @@
 import Link from "next/link"
 import React, { useState } from "react"
-import { getPosts } from "../../services"
 
-const Artists = ({ artists }) => {
+const ArtistsCard = ({ artists }) => {
   console.log(artists[0].node)
   const [featured, setFeatured] = useState(true)
   return (
@@ -65,4 +64,4 @@ const Artists = ({ artists }) => {
   )
 }
 
-export default Artists
+export default ArtistsCard

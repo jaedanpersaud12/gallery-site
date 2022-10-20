@@ -1,24 +1,23 @@
 import Head from "next/head"
-import { ArtistsCard, Features } from "../components"
+import { AllArtists } from "../components"
 import { getArtists } from "../services"
 
-export default function Home({ artists }) {
+export default function Artists({ myartists }) {
   return (
     <div className="mx-auto px-10">
       <Head>
         <title>Think Artwork TT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Features />
-      <ArtistsCard artists={artists} />
-      <Features />
+
+      <AllArtists artists={myartists} />
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const artists = (await getArtists()) || []
+  const myartists = (await getArtists()) || []
   return {
-    props: { artists },
+    props: { myartists },
   }
 }
