@@ -14,7 +14,7 @@ const ArtistDetails = ({ artist }) => {
             src={artist.featuredArt.image.url}
             alt=""
           />
-          <h1 class="uppercase tracking-[.4em] text-2xl absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <h1 class="uppercase tracking-[.4em] text-2xl text-center absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             {artist.name}
           </h1>
         </div>
@@ -38,7 +38,7 @@ const ArtistDetails = ({ artist }) => {
             </div>
             <div>
               <img
-                className="h-full ml-auto"
+                className="h-full w-48 mx-auto md:ml-auto"
                 src={artist.artworks[0].image.url}
                 alt=""
               />
