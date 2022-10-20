@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { getArtists, getArtistDetails } from "../../services"
-import { CurrentPage, Overview, Works } from "../../components"
+import { CurrentPage, Featured, Overview, Works } from "../../components"
 import data from "../../components/Artist/pages.json"
 
 const ArtistDetails = ({ artist }) => {
@@ -20,16 +20,7 @@ const ArtistDetails = ({ artist }) => {
     <div className="">
       {artist.featuredArt && (
         // FEATURED COMPONENT
-        <div className="relative">
-          <img
-            className="w-full h-64 object-cover brightness-75"
-            src={artist.featuredArt.image.url}
-            alt=""
-          />
-          <h1 className="uppercase tracking-[.4em] text-2xl text-center absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            {artist.name}
-          </h1>
-        </div>
+        <Featured artist={artist} />
         // FEATURED COMPONENT
       )}
       <div>

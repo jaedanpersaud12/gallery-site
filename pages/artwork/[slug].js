@@ -19,7 +19,7 @@ const ArtworkDetails = ({ artwork }) => {
           </button>
         </div>
         <div className="mx-auto">
-          <div key={artwork.name}>
+          <div className="mx-auto" key={artwork.name}>
             <Link href={`/artwork/${artwork.slug}`}>
               <div
                 data-aos="fade-up"
@@ -27,7 +27,7 @@ const ArtworkDetails = ({ artwork }) => {
                 data-aos-duration="1100"
                 className="cursor-pointer"
               >
-                <div className="w-[400px]">
+                <div className="w-[400px] mx-auto">
                   <img src={artwork.image.url} />
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Works = ({ artist }) => {
           <Link href={`/artwork/${artwork.slug}`}>
             <div
               data-aos="fade-up"
-              data-aos-anchor-placement="bottom-bottom"
+              data-aos-anchor-placement="middle-middle"
               data-aos-duration="1100"
               className="cursor-pointer"
             >

@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import getContentFragment from "../../utils/getContentFragment"
 
@@ -22,14 +23,18 @@ const Overview = ({ artist }) => {
         )}
       </div>
       <div className="mx-auto md:ml-auto">
-        <img
-          className="h-[500px] object-contain"
-          src={artist.artworks[0].image.url}
-          alt=""
-        />
-        <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
-          {artist.artworks[0].name}
-        </p>
+        <Link href={`/artwork/${artist.artworks[0].slug}`}>
+          <div className="cursor-pointer">
+            <img
+              className="h-[500px] hover:scale-105 duration-200 object-contain"
+              src={artist.artworks[0].image.url}
+              alt=""
+            />
+            <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
+              {artist.artworks[0].name}
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   )

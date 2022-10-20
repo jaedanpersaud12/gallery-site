@@ -39,7 +39,7 @@ const Artists = ({ artists }) => {
               >
                 <div className="">
                   <img
-                    className="hover:brightness-90   hover:scale-105 duration-200 aspect-square"
+                    className="hover:brightness-90 hover:scale-105 duration-200 aspect-square"
                     src={artist.node.image.url}
                   />
                 </div>

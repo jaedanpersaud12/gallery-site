@@ -6,7 +6,6 @@ const Artwork = ({ artist }) => {
       <Link href={`/artist/${artist.node.slug}`}>
         <div
           data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
           data-aos-duration="1100"
           className="cursor-pointer"
         >
