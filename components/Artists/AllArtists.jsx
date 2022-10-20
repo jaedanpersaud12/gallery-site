@@ -2,7 +2,6 @@ import Link from "next/link"
 import React, { useState } from "react"
 
 const AllArtists = ({ artists }) => {
-  console.log(artists[0].node)
   const [featured, setFeatured] = useState(true)
   return (
     <div className="my-10 py-10 border-y">

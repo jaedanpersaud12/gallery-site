@@ -3,7 +3,6 @@ import React from "react"
 import { getArtworkDetails, getArtworks } from "../../services"
 
 const ArtworkDetails = ({ artwork }) => {
-  console.log(artwork)
   return (
     <div className="px-10 md:px-24 py-32 h-screen my-auto">
       <div className="grid grid-cols-1 items-center md:grid-cols-2">
