@@ -28,7 +28,7 @@ const ArtistsCard = ({ artists }) => {
       <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 pt-10">
         {artists.map((artist) => (
           <div key={artist.node.name}>
-            <Link href={`/artist/${artist.node.slug}`}>
+            <Link href={`/artists/${artist.node.slug}`}>
               <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"

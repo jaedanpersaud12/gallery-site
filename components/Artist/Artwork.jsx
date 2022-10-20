@@ -3,7 +3,7 @@ import React from "react"
 const Artwork = ({ artist }) => {
   return (
     <div key={artist.node.name}>
-      <Link href={`/artist/${artist.node.slug}`}>
+      <Link href={`/artists/${artist.node.slug}`}>
         <div
           data-aos="fade-up"
           data-aos-duration="1100"
