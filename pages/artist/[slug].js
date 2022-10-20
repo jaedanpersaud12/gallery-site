@@ -4,7 +4,63 @@ import Artists from "../../components/Home/Artists"
 import { getArtists, getArtistDetails } from "../../services"
 
 const ArtistDetails = ({ artist }) => {
-  console.table(artist.artworks[0])
+  const getContentFragment = (index, text, obj, type) => {
+    let modifiedText = text
+
+    if (obj) {
+      if (obj.bold) {
+        modifiedText = <b key={index}>{text}</b>
+      }
+
+      if (obj.italic) {
+        modifiedText = <em key={index}>{text}</em>
+      }
+
+      if (obj.underline) {
+        modifiedText = <u key={index}>{text}</u>
+      }
+    }
+
+    switch (type) {
+      case "heading-three":
+        return (
+          <h3 key={index} className="text-xl font-semibold mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h3>
+        )
+      case "paragraph":
+        return (
+          <p key={index} className="mb-8">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </p>
+        )
+      case "heading-four":
+        return (
+          <h4 key={index} className="text-md font-semibold mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h4>
+        )
+      case "image":
+        return (
+          <img
+            key={index}
+            alt={obj.title}
+            height={obj.height}
+            width={obj.width}
+            src={obj.src}
+          />
+        )
+      default:
+        return modifiedText
+    }
+  }
+
   return (
     <div className="">
       {artist.featuredArt && (
@@ -30,15 +86,27 @@ const ArtistDetails = ({ artist }) => {
               <li>Enquire</li>
             </ul>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:py-20">
+          <div className="grid grid-cols-1 items-center md:grid-cols-2 md:py-20">
             <div>
-              <p className="text-[13px] tracking-wide py-14 md:py-20 pr-10">
-                {artist.longBio}
-              </p>
+              {artist.biography && (
+                <p className="text-[15px] open-sans tracking-wide py-14 md:py-20 pr-10">
+                  {artist.biography.raw.children.map((typeObj, index) => {
+                    const children = typeObj.children.map((item, itemIndex) =>
+                      getContentFragment(itemIndex, item.text, item)
+                    )
+                    return getContentFragment(
+                      index,
+                      children,
+                      typeObj,
+                      typeObj.type
+                    )
+                  })}
+                </p>
+              )}
             </div>
             <div>
               <img
-                className="h-full w-48 mx-auto md:ml-auto"
+                className="h-[500px] object-contain mx-auto md:ml-auto"
                 src={artist.artworks[0].image.url}
                 alt=""
               />

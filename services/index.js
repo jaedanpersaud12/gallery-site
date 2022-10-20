@@ -47,7 +47,9 @@ export const getArtistDetails = async (slug) => {
           }
         }
         slug
-        longBio
+        biography {
+          raw
+        }
         shortBio
         featuredArt {
           image {

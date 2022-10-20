@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@362&display=swap");
 .fancy {
   font-family: "Crimson Text", serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
 }
