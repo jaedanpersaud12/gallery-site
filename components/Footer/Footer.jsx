@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="mx-auto px-10 sticky top-0 z-30 transition-all duration-300 text-black bg-white dark:bg-black dark:text-gray-200">
       <div className="border-t">
-        <div className="flex justify-between py-14">
+        <div className="flex justify-between py-20">
           <div>
             <h2 className="fancy uppercase tracking-widest  text-[10px] pl-4">
               Think Artwork TT

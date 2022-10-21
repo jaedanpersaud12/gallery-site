@@ -17,14 +17,9 @@ const ArtistDetails = ({ artist }) => {
   }
   return (
     <div className="">
-      {artist.featuredArt && (
-        // FEATURED COMPONENT
-        <Featured artist={artist} />
-        // FEATURED COMPONENT
-      )}
+      {artist.featuredArt && <Featured artist={artist} />}
       <div>
-        <div className="px-10 md:px-24 py-10">
-          {/* COMPONENT */}
+        <div className="px-10 md:px-24 pt-10">
           <div>
             <ul className="flex flex-wrap gap-10 uppercase tracking-[.4em] text-[10px]">
               {data.map((pages) => (
@@ -37,8 +32,6 @@ const ArtistDetails = ({ artist }) => {
               ))}
             </ul>
           </div>
-          {/* COMPONENT */}
-
           {showCurrent()}
         </div>
       </div>

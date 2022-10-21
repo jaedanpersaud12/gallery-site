@@ -68,7 +68,7 @@ const Overview = ({ artist }) => {
     >
       <div>
         {artist.biography && (
-          <p className="uppercase text-[12px] open-sans tracking-wide py-14 md:py-20 pr-10">
+          <p className="uppercase font-light text-[12px] open-sans tracking-wide py-14 md:py-20 pr-10">
             {artist.biography.raw.children.map((typeObj, index) => {
               const children = typeObj.children.map((item, itemIndex) =>
                 getContentFragment(itemIndex, item.text, item)

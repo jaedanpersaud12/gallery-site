@@ -4,7 +4,7 @@ import React, { useState } from "react"
 const AllArtists = ({ artists }) => {
   const [featured, setFeatured] = useState(true)
   return (
-    <div className="my-10 py-10 border-t">
+    <div className="py-20 border-t">
       <div className="flex justify-between">
         {/* HEADER 1 h2 */}
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
@@ -25,7 +25,7 @@ const AllArtists = ({ artists }) => {
           </h2>
         </button>
       </div>
-      <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 pt-10">
+      <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 py-20">
         {artists.map((artist) => (
           <div key={artist.node.name}>
             <Link href={`/artists/${artist.node.slug}`}>
@@ -49,12 +49,6 @@ const AllArtists = ({ artists }) => {
           </div>
         ))}
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1100"
-        className="pt-16"
-      ></div>
     </div>
   )
 }

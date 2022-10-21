@@ -4,7 +4,7 @@ import React from "react"
 
 const Works = ({ artist }) => {
   return (
-    <div className="grid gap-x-10 items-center lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 pt-20">
+    <div className="grid gap-x-10 items-center lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 py-28">
       {artist.artworks.map((artwork) => (
         <div key={artwork.name}>
           <Link href={`/artwork/${artwork.slug}`}>
