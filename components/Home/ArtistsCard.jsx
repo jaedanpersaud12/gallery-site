@@ -56,7 +56,7 @@ const ArtistsCard = ({ artists }) => {
         className="pt-16"
       >
         <p className="uppercase tracking-[.3em] text-[10px] transition duration-200 text-gray-600 dark:text-gray-400 dark:hover:text-gray-100 hover:text-black">
-          <Link href={"/"}>See all artists</Link>
+          <Link href={"/artists"}>See all artists</Link>
         </p>
       </div>
     </div>

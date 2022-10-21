@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { AllArtists } from "../components"
-import { getArtists } from "../services"
+import { getAllArtists, getArtists } from "../services"
 
 export default function Artists({ myartists }) {
   return (
@@ -16,7 +16,7 @@ export default function Artists({ myartists }) {
 }
 
 export async function getStaticProps() {
-  const myartists = (await getArtists()) || []
+  const myartists = (await getAllArtists()) || []
   return {
     props: { myartists },
   }

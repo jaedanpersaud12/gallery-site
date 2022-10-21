@@ -11,11 +11,26 @@ export const getArtists = async () => {
             name
             slug
             image {
-              url(
-                transformation: {
-                  image: { resize: { height: 1000, width: 1000 } }
-                }
-              )
+              url(transformation: { image: { resize: { width: 1000 } } })
+            }
+          }
+        }
+      }
+    }
+  `
+  const results = await request(graphqlAPI, query)
+  return results.artistsConnection.edges
+}
+export const getAllArtists = async () => {
+  const query = gql`
+    query GetArtists {
+      artistsConnection {
+        edges {
+          node {
+            name
+            slug
+            image {
+              url(transformation: { image: { resize: { width: 1000 } } })
             }
           }
         }
@@ -32,16 +47,16 @@ export const getArtistDetails = async (slug) => {
       artist(where: { slug: $slug }) {
         name
         image {
-          url(
-            transformation: { image: { resize: { height: 1000, width: 1000 } } }
-          )
+          url(transformation: { image: { resize: { width: 1000 } } })
         }
         artworks {
           ... on Artwork {
             id
             name
             image {
-              url
+              url(transformation: { image: { resize: { width: 1000 } } })
+              height
+              width
             }
             slug
           }
@@ -53,11 +68,7 @@ export const getArtistDetails = async (slug) => {
         shortBio
         featuredArt {
           image {
-            url(
-              transformation: {
-                image: { resize: { height: 1000, width: 1000 } }
-              }
-            )
+            url(transformation: { image: { resize: { width: 1000 } } })
           }
         }
       }
@@ -76,11 +87,7 @@ export const getArtworks = async () => {
             name
             slug
             image {
-              url(
-                transformation: {
-                  image: { resize: { height: 1000, width: 1000 } }
-                }
-              )
+              url(transformation: { image: { resize: { width: 1000 } } })
             }
           }
         }
@@ -99,7 +106,7 @@ export const getArtworkDetails = async (slug) => {
         medium
         slug
         image {
-          url
+          url(transformation: { image: { resize: { width: 1000 } } })
         }
         artist {
           name

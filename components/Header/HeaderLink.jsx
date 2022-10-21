@@ -8,7 +8,7 @@ const HeaderLink = ({ item }) => {
     <div className="hidden md:block">
       <Link key={item.name} href={`/${item.link}`}>
         <span
-          className={`uppercase tracking-[.3em] text-[10px] align-middle ml-8 ${
+          className={`whitespace-nowrap uppercase tracking-[.3em] text-[10px] align-middle ml-6 ${
             router.pathname.includes(item.link) && `${item.color}`
           } ${item.hoverColor} dark:hover:text-${
             item.color

@@ -41,7 +41,7 @@ const navItems = [
 const Header = () => {
   return (
     <div className="mx-auto px-10 sticky top-0 z-30 transition-all duration-300 text-black bg-white dark:bg-black dark:text-gray-200">
-      <div className="flex items-center justify-between w-full py-2">
+      <div className="flex items-center justify-between w-full py-4 md:py-2">
         <div className="md:float-left block">
           {/* COMPONENT */}
           <HomeLink />

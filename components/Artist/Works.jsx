@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
@@ -13,10 +14,14 @@ const Works = ({ artist }) => {
               data-aos-duration="1100"
               className="cursor-pointer"
             >
-              <div className="">
-                <img
-                  className="hover:brightness-90 hover:scale-105 duration-200"
+              <div
+                className={`hover:scale-105 transition-all duration-200 relative`}
+              >
+                <Image
+                  className="hover:brightness-90 transition-all duration-200"
                   src={artwork.image.url}
+                  width={artwork.image.width}
+                  height={artwork.image.height}
                 />
               </div>
               <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
