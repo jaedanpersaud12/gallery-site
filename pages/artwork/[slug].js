@@ -1,13 +1,18 @@
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import { getArtworkDetails, getArtworks } from "../../services"
 
 const ArtworkDetails = ({ artwork }) => {
   return (
-    <div className="px-10 md:px-24 py-32 h-screen my-auto">
+    <div className="px-10 lg:px-48 md:py-32 my-auto">
       <div className="grid grid-cols-1 items-center md:grid-cols-2">
-        <div className="uppercase tracking-[.4em] pt-10">
-          <h2 className="text-4xl font-semibold">{artwork.artist.name}</h2>
+        <div className="uppercase tracking-[.4em] py-20">
+          <Link href={`/artists/${artwork.artist.slug}`}>
+            <a>
+              <h2 className="text-4xl font-semibold">{artwork.artist.name}</h2>
+            </a>
+          </Link>
           <h2 className="text-3xl">{artwork.name}</h2>
           <div className="py-8">
             <h3 className="text-[12px] tracking-wide">{artwork.medium}</h3>
@@ -17,20 +22,20 @@ const ArtworkDetails = ({ artwork }) => {
             ENQUIRE
           </button>
         </div>
-        <div className="mx-auto">
-          <div className="mx-auto" key={artwork.name}>
-            <Link href={`/artwork/${artwork.slug}`}>
-              <div
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom"
-                data-aos-duration="1100"
-                className="cursor-pointer"
-              >
-                <div className="w-[400px] mx-auto">
-                  <img src={artwork.image.url} />
-                </div>
-              </div>
-            </Link>
+        <div className="pb-20 md:pb-0 mx-auto" key={artwork.name}>
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-middle"
+            data-aos-duration="1100"
+          >
+            <div className="mx-auto">
+              <Image
+                className=""
+                src={artwork.image.url}
+                width={artwork.image.width}
+                height={artwork.image.height}
+              />
+            </div>
           </div>
         </div>
       </div>

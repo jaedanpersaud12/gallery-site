@@ -2,10 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
-const Artwork = ({ artwork }) => {
+const ArtworkCard = ({ artwork }) => {
   return (
-    <div key={artwork.name}>
-      <Link href={`/artwork/${artwork.slug}`}>
+    <div key={artwork.node.name}>
+      <Link href={`/artwork/${artwork.node.slug}`}>
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="middle-middle"
@@ -17,13 +17,16 @@ const Artwork = ({ artwork }) => {
           >
             <Image
               className="hover:brightness-90 transition-all duration-200"
-              src={artwork.image.url}
-              width={artwork.image.width}
-              height={artwork.image.height}
+              src={artwork.node.image.url}
+              width={artwork.node.image.width}
+              height={artwork.node.image.height}
             />
           </div>
           <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
-            {artwork.name}
+            {artwork.node.name}
+          </p>
+          <p className="uppercase tracking-[.3em] text-[10px] text-gray-600 dark:text-gray-400">
+            {artwork.node.artist.name}
           </p>
         </div>
       </Link>
@@ -31,4 +34,4 @@ const Artwork = ({ artwork }) => {
   )
 }
 
-export default Artwork
+export default ArtworkCard

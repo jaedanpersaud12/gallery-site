@@ -5,10 +5,10 @@ import { useRouter } from "next/router"
 const HeaderLink = ({ item }) => {
   const router = useRouter()
   return (
-    <div className="hidden md:flex items-center">
+    <div className="md:flex items-center">
       <Link key={item.name} href={`/${item.link}`}>
         <span
-          className={`whitespace-nowrap uppercase tracking-[.3em] text-[10px]  ml-6 ${
+          className={`flex items-center whitespace-nowrap uppercase tracking-[.3em] text-[10px]  ml-6 ${
             router.pathname.includes(item.link) && `${item.color}`
           } ${item.hoverColor} dark:hover:text-${
             item.color

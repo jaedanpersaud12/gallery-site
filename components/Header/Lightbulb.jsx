@@ -4,7 +4,7 @@ import useDarkMode from "../../hooks/UseDarkmode"
 const Lightbulb = () => {
   const [colorTheme, setTheme] = useDarkMode()
   return (
-    <div className="ml-4 cursor-pointer">
+    <div className="ml-5 cursor-pointer">
       {colorTheme === "light" ? (
         <svg
           onClick={() => setTheme("light")}

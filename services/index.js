@@ -131,7 +131,9 @@ export const getArtworkDetails = async (slug) => {
         medium
         slug
         image {
-          url(transformation: { image: { resize: { width: 1000 } } })
+          url(transformation: { image: { resize: { height: 1000 } } })
+          width
+          height
         }
         artist {
           name

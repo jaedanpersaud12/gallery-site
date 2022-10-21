@@ -19,3 +19,4 @@ export { default as Featured } from "./Artist/Featured"
 export { default as Artwork } from "./Artist/Artwork"
 
 export { default as AllArtworks } from "./Artworks/AllArtworks"
+export { default as ArtworkCard } from "./Artworks/ArtworkCard"
