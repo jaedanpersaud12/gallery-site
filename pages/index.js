@@ -11,7 +11,6 @@ export default function Home({ artists }) {
       </Head>
       <Features />
       <ArtistsCard artists={artists} />
-      <Features />
     </div>
   )
 }
