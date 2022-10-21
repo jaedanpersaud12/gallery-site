@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import { AiOutlineInstagram } from "react-icons/ai"
 import { FaFacebookF } from "react-icons/fa"
@@ -13,8 +14,16 @@ const Footer = () => {
             </h2>
           </div>
           <div className="flex gap-x-4 pr-4">
-            <AiOutlineInstagram />
-            <FaFacebookF />
+            <Link href={"https://www.instagram.com/fitzroyhoyte/"}>
+              <a target={"_blank"} rel="noreferrer">
+                <AiOutlineInstagram className="cursor-pointer hover:text-ora transition-all duration-200" />
+              </a>
+            </Link>
+            <Link href={"https://www.facebook.com/thinkartworktt"}>
+              <a target={"_blank"} rel="noreferrer">
+                <FaFacebookF className="cursor-pointer hover:text-blu transition-all duration-200" />
+              </a>
+            </Link>
           </div>
         </div>
       </div>
