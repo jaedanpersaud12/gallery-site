@@ -8,7 +8,7 @@ const AllArtists = ({ artists }) => {
       <div className="flex justify-between">
         {/* HEADER 1 h2 */}
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
-          Artists
+          All Artists
         </h1>
         {/* HEADER 1 */}
         <button

@@ -98,6 +98,31 @@ export const getArtworks = async () => {
   return result.artworksConnection.edges
 }
 
+export const getAllArtworks = async () => {
+  const query = gql`
+    query GetAllArtworks {
+      artworksConnection(orderBy: publishedAt_DESC) {
+        edges {
+          node {
+            name
+            slug
+            image {
+              url
+              width
+              height
+            }
+            artist {
+              name
+            }
+          }
+        }
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query)
+  return result.artworksConnection.edges
+}
+
 export const getArtworkDetails = async (slug) => {
   const query = gql`
     query GetArtwork($slug: String!) {

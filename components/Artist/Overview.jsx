@@ -21,14 +21,6 @@ const Overview = ({ artist }) => {
     }
 
     switch (type) {
-      case "heading-three":
-        return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h3>
-        )
       case "paragraph":
         return (
           <p key={index} className="mb-8">
@@ -37,13 +29,14 @@ const Overview = ({ artist }) => {
             ))}
           </p>
         )
-      case "heading-four":
+
+      case "link":
         return (
-          <h4 key={index} className="text-md font-semibold mb-4">
+          <Link key={index} className="text-2xl  font-semibold mb-4">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
-          </h4>
+          </Link>
         )
       case "image":
         return (

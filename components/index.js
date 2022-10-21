@@ -17,3 +17,5 @@ export { default as Overview } from "./Artist/Overview"
 export { default as Works } from "./Artist/Works"
 export { default as Featured } from "./Artist/Featured"
 export { default as Artwork } from "./Artist/Artwork"
+
+export { default as AllArtworks } from "./Artworks/AllArtworks"
