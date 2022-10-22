@@ -152,7 +152,7 @@ export const getFeaturedArtworks = async () => {
       artworks(orderBy: publishedAt_DESC) {
         name
         image {
-          url
+          url(transformation: { image: { resize: { height: 1000 } } })
           width
           height
         }
