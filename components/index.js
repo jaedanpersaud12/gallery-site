@@ -1,10 +1,10 @@
 export { default as Header } from "./Header/Header"
 export { default as HeaderLink } from "./Header/HeaderLink"
 export { default as HomeLink } from "./Header/HomeLink"
+export { default as Lightbulb } from "./Header/Lightbulb"
 
 export { default as ArtistsCard } from "./Home/ArtistsCard"
-export { default as Features } from "./Home/Features"
-export { default as Lightbulb } from "./Header/Lightbulb"
+export { default as FeaturedEventCard } from "./Home/FeaturedEventCard"
 
 export { default as Layout } from "./Layout"
 

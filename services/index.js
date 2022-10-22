@@ -145,3 +145,24 @@ export const getArtworkDetails = async (slug) => {
   const result = await request(graphqlAPI, query, { slug })
   return result.artwork
 }
+
+export const getFeaturedArtworks = async () => {
+  const query = gql`
+    query GetFeaturedArtworks {
+      artworks(orderBy: publishedAt_DESC) {
+        name
+        image {
+          url
+          width
+          height
+        }
+        artist {
+          name
+        }
+        slug
+      }
+    }
+  `
+  const result = await request(graphqlAPI, query)
+  return result.artworks
+}

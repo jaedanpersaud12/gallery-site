@@ -1,15 +1,16 @@
 import Head from "next/head"
-import { ArtistsCard, Features } from "../components"
-import { getArtists } from "../services"
+import { ArtistsCard, FeaturedEventCard } from "../components"
+import FeaturedEvents from "../sections/FeaturedEvents"
+import { getArtists, getFeaturedArtworks } from "../services"
 
-export default function Home({ artists }) {
+export default function Home({ artists, artworks }) {
   return (
-    <div className="mx-auto px-10">
+    <div className="mx-auto">
       <Head>
         <title>Think Artwork TT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Features />
+      <FeaturedEvents artworks={artworks} />
       <ArtistsCard artists={artists} />
     </div>
   )
@@ -17,7 +18,8 @@ export default function Home({ artists }) {
 
 export async function getStaticProps() {
   const artists = (await getArtists()) || []
+  const artworks = (await getFeaturedArtworks()) || []
   return {
-    props: { artists },
+    props: { artists, artworks },
   }
 }

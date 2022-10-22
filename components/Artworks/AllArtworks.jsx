@@ -4,7 +4,6 @@ import React from "react"
 import ArtworkCard from "./ArtworkCard"
 
 const AllArtworks = ({ artworks }) => {
-  console.log(artworks)
   return (
     <div className="py-20 border-t">
       <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
