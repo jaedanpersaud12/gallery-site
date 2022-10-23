@@ -72,7 +72,7 @@ const Overview = ({ artist }) => {
         )}
       </div>
       <div className="mr-auto md:ml-auto pb-20 md:py-0">
-        {artist.artworks && (
+        {artist.artworks[0] && (
           <Link href={`/artwork/${artist.artworks[0].slug}`}>
             <div className="cursor-pointer">
               <img
