@@ -4,7 +4,7 @@ import React, { useState } from "react"
 const AllArtists = ({ artists }) => {
   const [featured, setFeatured] = useState(true)
   return (
-    <div className="py-20 border-t">
+    <div className="py-10 md:py-14  border-t">
       <div className="flex justify-between">
         {/* HEADER 1 h2 */}
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">
@@ -15,17 +15,9 @@ const AllArtists = ({ artists }) => {
           onClick={() => {
             setFeatured(!featured)
           }}
-        >
-          <h2
-            className={`uppercase tracking-[.3em] text-sm text-black dark:text-gray-200 ${
-              featured ? `` : `line-through`
-            }`}
-          >
-            SHOW FEATURED
-          </h2>
-        </button>
+        ></button>
       </div>
-      <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 py-20">
+      <div className="grid gap-x-10 lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-y-10 py-10 md:py-14 ">
         {artists.map((artist) => (
           <div key={artist.node.name}>
             <Link href={`/artists/${artist.node.slug}`}>

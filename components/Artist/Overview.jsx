@@ -57,11 +57,11 @@ const Overview = ({ artist }) => {
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
       data-aos-duration="1100"
-      className="grid grid-cols-1 items-center md:grid-cols-2 md:py-20"
+      className="grid grid-cols-1 items-center md:grid-cols-2 py-10 md:py-14"
     >
       <div>
         {artist.biography && (
-          <p className="uppercase font-light text-[12px] open-sans tracking-wide py-14 md:py-20 pr-10">
+          <p className="uppercase font-light text-[12px] open-sans tracking-wide py-14 md: py-10  pr-10">
             {artist.biography.raw.children.map((typeObj, index) => {
               const children = typeObj.children.map((item, itemIndex) =>
                 getContentFragment(itemIndex, item.text, item)
