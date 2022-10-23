@@ -1,9 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
-import { getArtworkDetails, getArtworks } from "../../services"
+import { useRouter } from "next/router"
+import { getArtworkDetails, getArtwork } from "../../services"
+import { Loader } from "../../components"
 
 const ArtworkDetails = ({ artwork }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <Loader />
+  }
   return (
     <div className="px-10 lg:px-48 md:py-32 my-auto">
       <div className="grid grid-cols-1 items-center md:grid-cols-2">
@@ -56,6 +62,6 @@ export async function getStaticPaths() {
   const artworks = await getArtworks()
   return {
     paths: artworks.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: false,
+    fallback: true,
   }
 }

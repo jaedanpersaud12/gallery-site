@@ -7,6 +7,7 @@ export { default as ArtistsCard } from "./Home/ArtistsCard"
 export { default as FeaturedEventCard } from "./Home/FeaturedEventCard"
 
 export { default as Layout } from "./Layout"
+export { default as Loader } from "./Loader"
 
 export { default as Footer } from "./Footer/Footer"
 
