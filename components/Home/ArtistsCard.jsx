@@ -49,12 +49,7 @@ const ArtistsCard = ({ artists }) => {
           </div>
         ))}
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
-        data-aos-duration="1100"
-        className="pt-16"
-      >
+      <div className="pt-16">
         <p className="uppercase tracking-[.3em] text-[10px] transition duration-200 text-gray-600 dark:text-gray-400 dark:hover:text-gray-100 hover:text-black">
           <Link href={"/artists"}>See all artists</Link>
         </p>
