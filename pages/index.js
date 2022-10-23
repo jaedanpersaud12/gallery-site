@@ -5,7 +5,7 @@ import { getArtists, getFeaturedArtworks } from "../services"
 
 export default function Home({ artists, artworks }) {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto ">
       <Head>
         <title>Think Artwork TT</title>
         <link rel="icon" href="/favicon.ico" />
