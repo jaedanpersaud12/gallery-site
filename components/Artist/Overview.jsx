@@ -72,18 +72,21 @@ const Overview = ({ artist }) => {
         )}
       </div>
       <div className="mr-auto md:ml-auto pb-20 md:py-0">
-        <Link href={`/artwork/${artist.artworks[0].slug}`}>
-          <div className="cursor-pointer">
-            <img
-              className="h-[500px] hover:scale-105 duration-200 object-contain"
-              src={artist.artworks[0].image.url}
-              alt=""
-            />
-            <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
-              {artist.artworks[0].name}
-            </p>
-          </div>
-        </Link>
+        {artist.artworks && (
+          <Link href={`/artwork/${artist.artworks[0].slug}`}>
+            <div className="cursor-pointer">
+              <img
+                className="h-[500px] hover:scale-105 duration-200 object-contain"
+                src={artist.artworks[0].image.url}
+                alt=""
+              />
+
+              <p className="uppercase tracking-[.3em] text-sm pt-5 text-black dark:text-gray-200">
+                {artist.artworks[0].name}
+              </p>
+            </div>
+          </Link>
+        )}
       </div>
     </div>
   )
