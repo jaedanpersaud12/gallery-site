@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const FeaturedEventCard = ({ post }) => {
   return (
-    <div className="relative h-96">
+    <div className="relative h-96 pr-10">
       <div
         className="absolute bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-96"
         style={{ backgroundImage: `url('${post.image.url}')` }}
