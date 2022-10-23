@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 import { useRouter } from "next/router"
-import { getArtworkDetails, getArtwork } from "../../services"
+import { getArtworkDetails, getArtworks } from "../../services"
 import { Loader } from "../../components"
 
 const ArtworkDetails = ({ artwork }) => {
