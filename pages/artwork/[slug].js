@@ -14,12 +14,14 @@ const ArtworkDetails = ({ artwork }) => {
     <div className="px-10 lg:px-48 py-10 md:py-20 my-auto">
       <div className="grid grid-cols-1 items-center md:grid-cols-2">
         <div className="uppercase tracking-[.4em] pb-10 md:py-20">
+          <h2 className="text-4xl font-semibold">{artwork.name}</h2>
           <Link href={`/artists/${artwork.artist.slug}`}>
             <a>
-              <h2 className="text-4xl font-semibold">{artwork.artist.name}</h2>
+              <h2 className="text-3xl text-gray-500 dark:text-gray-300">
+                {artwork.artist.name}
+              </h2>
             </a>
           </Link>
-          <h2 className="text-3xl">{artwork.name}</h2>
           <div className="py-8">
             <h3 className="text-[12px] tracking-wide">{artwork.medium}</h3>
             <h3 className="text-[12px] tracking-wide">123" x 123"</h3>
