@@ -9,7 +9,6 @@ export default function Artists({ myartists }) {
         <title>Think Artwork TT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <AllArtists artists={myartists} />
     </div>
   )
