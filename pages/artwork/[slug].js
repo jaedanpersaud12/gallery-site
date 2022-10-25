@@ -57,7 +57,6 @@ export async function getStaticProps({ params }) {
     props: { artwork: data },
   }
 }
-
 export async function getStaticPaths() {
   const artworks = await getArtworks()
   return {
