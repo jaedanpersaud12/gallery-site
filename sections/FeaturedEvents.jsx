@@ -27,7 +27,7 @@ const responsive = {
 const FeaturedEvents = ({ artworks }) => {
   return (
     <div className="">
-      <Carousel infinite responsive={responsive} itemClass="px-4">
+      <Carousel infinite responsive={responsive} itemClass="px-10">
         {artworks.map((post, index) => (
           <FeaturedEventCard key={index} post={post} />
         ))}

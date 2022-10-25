@@ -4,7 +4,7 @@ import React, { useState } from "react"
 const ArtistsCard = ({ artists }) => {
   const [featured, setFeatured] = useState(true)
   return (
-    <div className="my-10 px-10  py-10 border-t">
+    <div className="px-10 py-10 ">
       <div className="flex justify-between">
         {/* HEADER 1 h2 */}
         <h1 className="uppercase tracking-[.3em] text-sm text-black dark:text-gray-200">

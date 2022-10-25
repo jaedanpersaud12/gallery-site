@@ -11,9 +11,9 @@ const ArtworkDetails = ({ artwork }) => {
     return <Loader />
   }
   return (
-    <div className="px-10 lg:px-48 md:py-32 my-auto">
+    <div className="px-10 lg:px-48 py-10 md:py-20 my-auto">
       <div className="grid grid-cols-1 items-center md:grid-cols-2">
-        <div className="uppercase tracking-[.4em] py-20">
+        <div className="uppercase tracking-[.4em] pb-10 md:py-20">
           <Link href={`/artists/${artwork.artist.slug}`}>
             <a>
               <h2 className="text-4xl font-semibold">{artwork.artist.name}</h2>
