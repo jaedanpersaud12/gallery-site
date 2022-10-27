@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { AllArtists } from "../components"
-import { getAllArtists, getArtists } from "../services"
+import { getAllArtists } from "../services"
 
 export default function Artists({ myartists }) {
   return (

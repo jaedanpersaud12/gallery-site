@@ -16,7 +16,7 @@ export default function Home({ artists, artworks }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const artists = (await getArtists()) || []
   const artworks = (await getFeaturedArtworks()) || []
   return {
