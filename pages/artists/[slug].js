@@ -52,7 +52,7 @@ const ArtistDetails = ({ artist }) => {
 
 export default ArtistDetails
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const data = await getArtistDetails(params.slug)
   return {
     props: { artist: data },
