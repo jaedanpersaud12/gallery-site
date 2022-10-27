@@ -18,24 +18,24 @@ const navItems = [
     color: "text-ora",
     hoverColor: "hover:text-ora",
   },
-  // {
-  //   name: "Exhibitions",
-  //   link: "exhibitions",
-  //   color: "text-yel",
-  //   hoverColor: "hover:text-yel",
-  // },
-  // {
-  //   name: "About Us",
-  //   link: "aboutus",
-  //   color: "text-gre",
-  //   hoverColor: "hover:text-gre",
-  // },
-  // {
-  //   name: "Contact",
-  //   link: "contact",
-  //   color: "text-blu",
-  //   hoverColor: "hover:text-blu",
-  // },
+  {
+    name: "Exhibitions",
+    link: "exhibitions",
+    color: "text-yel",
+    hoverColor: "hover:text-yel",
+  },
+  {
+    name: "About Us",
+    link: "aboutus",
+    color: "text-gre",
+    hoverColor: "hover:text-gre",
+  },
+  {
+    name: "Contact",
+    link: "contact",
+    color: "text-blu",
+    hoverColor: "hover:text-blu",
+  },
 ]
 
 const Header = () => {

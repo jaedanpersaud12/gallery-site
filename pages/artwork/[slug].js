@@ -53,7 +53,7 @@ const ArtworkDetails = ({ artwork }) => {
 
 export default ArtworkDetails
 
-export async function getStaticProps({ params }) {
+export async function getServerSidePropsProps({ params }) {
   const data = await getArtworkDetails(params.slug)
   return {
     props: { artwork: data },
