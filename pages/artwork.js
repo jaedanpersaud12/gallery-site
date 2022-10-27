@@ -12,7 +12,7 @@ const Artwork = ({ artworks }) => {
 
 export default Artwork
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const artworks = (await getAllArtworks()) || []
   return {
     props: { artworks },
