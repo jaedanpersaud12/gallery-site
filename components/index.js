@@ -21,3 +21,4 @@ export { default as Artwork } from "./Artist/Artwork"
 
 export { default as AllArtworks } from "./Artworks/AllArtworks"
 export { default as ArtworkCard } from "./Artworks/ArtworkCard"
+export { default as StripeForm } from "./Stripe/StripeForm"

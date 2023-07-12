@@ -1,6 +1,6 @@
-import { request, gql } from "graphql-request"
+import { request, gql } from "graphql-request";
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getArtists = async () => {
   const query = gql`
@@ -17,10 +17,10 @@ export const getArtists = async () => {
         }
       }
     }
-  `
-  const results = await request(graphqlAPI, query)
-  return results.artistsConnection.edges
-}
+  `;
+  const results = await request(graphqlAPI, query);
+  return results.artistsConnection.edges;
+};
 export const getAllArtists = async () => {
   const query = gql`
     query GetArtists {
@@ -36,10 +36,10 @@ export const getAllArtists = async () => {
         }
       }
     }
-  `
-  const results = await request(graphqlAPI, query)
-  return results.artistsConnection.edges
-}
+  `;
+  const results = await request(graphqlAPI, query);
+  return results.artistsConnection.edges;
+};
 
 export const getArtistDetails = async (slug) => {
   const query = gql`
@@ -73,10 +73,10 @@ export const getArtistDetails = async (slug) => {
         }
       }
     }
-  `
-  const result = await request(graphqlAPI, query, { slug })
-  return result.artist
-}
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.artist;
+};
 
 export const getArtworks = async () => {
   const query = gql`
@@ -93,10 +93,10 @@ export const getArtworks = async () => {
         }
       }
     }
-  `
-  const result = await request(graphqlAPI, query)
-  return result.artworksConnection.edges
-}
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.artworksConnection.edges;
+};
 
 export const getAllArtworks = async () => {
   const query = gql`
@@ -118,10 +118,10 @@ export const getAllArtworks = async () => {
         }
       }
     }
-  `
-  const result = await request(graphqlAPI, query)
-  return result.artworksConnection.edges
-}
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.artworksConnection.edges;
+};
 
 export const getArtworkDetails = async (slug) => {
   const query = gql`
@@ -141,10 +141,10 @@ export const getArtworkDetails = async (slug) => {
         }
       }
     }
-  `
-  const result = await request(graphqlAPI, query, { slug })
-  return result.artwork
-}
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.artwork;
+};
 
 export const getFeaturedArtworks = async () => {
   const query = gql`
@@ -162,7 +162,7 @@ export const getFeaturedArtworks = async () => {
         slug
       }
     }
-  `
-  const result = await request(graphqlAPI, query)
-  return result.artworks
-}
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.artworks;
+};
